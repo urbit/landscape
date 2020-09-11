@@ -2,7 +2,7 @@
 name: Feature request
 about: Suggest an idea for Landscape.
 title: ''
-labels: feature request
+labels: feature request, unreviewed
 assignees: ''
 
 ---
