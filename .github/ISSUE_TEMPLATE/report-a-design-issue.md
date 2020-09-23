@@ -1,10 +1,10 @@
 ---
-name: Report a Design Issue
+name: Report a design issue
 about: Use this template to file a report for observed design issues in Landscape.
   Design issues may include UX/experiential issues, visual design issues, or Indigo
   implementation issues.
 title: ''
-labels: landscape, design
+labels: design issue
 assignees: ''
 
 ---
