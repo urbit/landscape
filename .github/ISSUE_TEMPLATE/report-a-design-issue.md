@@ -4,7 +4,7 @@ about: Use this template to file a report for observed design issues in Landscap
   Design issues may include UX/experiential issues, visual design issues, or Indigo
   implementation issues.
 title: ''
-labels: design issue
+labels: design
 assignees: ''
 
 ---
