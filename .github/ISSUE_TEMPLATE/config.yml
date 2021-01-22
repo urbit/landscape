@@ -1,5 +1,1 @@
 blank_issues_enabled: true
-contact_links:
-  - name: Landscape bug report
-    url: https://github.com/urbit/urbit/issues/new?assignees=&labels=landscape&template=os1-bug-report.md&title=
-    about: Live network issues are handled at urbit/urbit. Submit Landscape bug reports here.
