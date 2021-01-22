@@ -1,8 +1,8 @@
 ---
-name: Notifications QA issue
-about: Testing for the Nov 2020 notifications release
+name: Report a bug
+about: Use this template to file a bug report for Landscape.
 title: ''
-labels: nov2020-hark
+labels: unreviewed
 assignees: ''
 
 ---
