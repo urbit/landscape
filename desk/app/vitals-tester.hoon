@@ -1,6 +1,7 @@
 /-  v=vitals
 /+  default-agent
-^-  agent:gall
+:-  %new-agent
+^-  form:agent:gall
 =>
   |%
   +$  card      card:agent:gall

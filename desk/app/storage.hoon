@@ -23,9 +23,10 @@
 =|  state-three
 =*  state  -
 ::
+:-  %new-agent
 %-  agent:dbug
 %+  verb  |
-^-  agent:gall
+^-  form:agent:gall
 ~%  %s3-agent-core  ..card  ~
 |_  =bowl:gall
 +*  this       .

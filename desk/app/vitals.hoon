@@ -29,7 +29,8 @@
 /-  v=vitals
 /+  lib=vitals
 /+  dbug, default-agent, verb
-^-  agent:gall
+:-  %new-agent
+^-  form:agent:gall
 =>
   |%
   +$  card  card:agent:gall
@@ -82,10 +83,10 @@
   ++  on-agent  on-agent:def
   ::
   ++  on-arvo
-    |=  [=wire sign=sign-arvo]
+    |=  [=wire gift=gift-user-v1:gall]
     ^-  (quip card _this)
     =^  cards  state
-      abet:(arvo:cor wire sign)
+      abet:(arvo:cor wire gift)
     [cards this]
   --
 |_  [=bowl:gall cards=(list card)]
@@ -124,7 +125,11 @@
       %run-check
     ?>  =(our src)
     =+  !<(=ship vase)
-    ?>  =(~ (find ~[our] (saxo:title our now ship)))
+    =/  in-chain=?  !=(~ (find ~[our] (saxo:title our now ship)))
+    =/  check-thread=@tas
+      ?:  in-chain
+        %vitals-sponsored-connection-check
+      %vitals-connection-check
     =/  stat=(unit result:v)  (~(get by connections) ship)
     ::  XX: code duplicated because of annoying type issue
     ?~  stat
@@ -133,10 +138,10 @@
       :*  %pass
           /check-result/(scot %p ship)
           %arvo
-          %k
+          %khan
           %fard
           %landscape
-          %vitals-connection-check
+          check-thread
           %noun
           !>((some ship))
       ==
@@ -148,10 +153,10 @@
     :*  %pass
         /check-result/(scot %p ship)
         %arvo
-        %k
+        %khan
         %fard
         %landscape
-        %vitals-connection-check
+        check-thread
         %noun
         !>((some ship))
     ==
@@ -204,19 +209,18 @@
     [*@da %complete %no-data ~]
   ==
 ++  arvo
-  |=  [=wire sign=sign-arvo]
+  |=  [=wire gift=gift-user-v1:gall]
   ^+  cor
   ?+    wire  ~|([%bad-arvo-take wire] !!)
       [%check-result @ta ~]
-    ?>  ?=(%khan -.sign)
-    ?>  ?=(%arow +<.sign)
+    ?>  ?=([%khan %arow *] gift)
     =/  =ship  (slav %p i.t.wire)
     =/  =result:v
       :-  now
       :-  %complete
-      ?-  -.p.sign
-        %&  !<(complete:v q.p.p.sign)
-        %|  [%crash tang.p.p.sign]
+      ?-  -.res.gift
+        %&  !<(complete:v q.p.res.gift)
+        %|  [%crash tang.p.res.gift]
       ==
     =.  connections  (~(put by connections) [ship result])
     %-  give

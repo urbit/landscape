@@ -28,9 +28,10 @@
         notify=|
       [~.contacts^%1 ~ ~]
     [~.contacts^[~.contacts^%1 ~ ~] ~ ~]
+:-  %new-agent
 %-  agent:dbug
 %+  verb  |
-^-  agent:gall
+^-  form:agent:gall
 =|  state-2
 =*  state  -
 =<  |_  =bowl:gall
@@ -73,8 +74,8 @@
       [cards this]
     ::
     ++  on-arvo
-      |=  [=wire sign=sign-arvo]
-      =^  cards  state  abet:(arvo:cor wire sign)
+      |=  [=wire gift=gift-user-v1:gall]
+      =^  cards  state  abet:(arvo:cor wire gift)
       [cards this]
     ::
     ++  on-fail   on-fail:def
@@ -329,7 +330,7 @@
                       =/  wake=@da  (add now.bowl ~m30)
                       =.  retry  (~(put by retry) who wake)
                       %_  si-cor  cor
-                        (pass /retry/(scot %p who) %arvo %b %wait wake)
+                        (pass /retry/(scot %p who) %arvo %behn %wait wake)
                       ==
         ::
           %kick       si-meet(sag ~)
@@ -423,7 +424,7 @@
                 ::
                 ?^  when=(~(get by retry) who)
                   =.  retry  (~(del by retry) who)
-                  (pass /retry/(scot %p who)/cancel %arvo %b %rest u.when)
+                  (pass /retry/(scot %p who)/cancel %arvo %behn %rest u.when)
                (pass /contact %agent [who dap.bowl] %leave ~)
         ==
       --
@@ -788,7 +789,7 @@
     ==
   ::
   ++  arvo
-    |=  [=wire sign=sign-arvo]
+    |=  [=wire gift=gift-user-v1:gall]
     ^+  cor
     ?+  wire  ~|(evil-vane+wire !!)
       ::
@@ -796,7 +797,7 @@
       ::  XX technically, the timer could fail.
       ::  it should be ok to still retry.
       ::
-      ?>  ?=([%behn %wake *] sign)
+      ?>  ?=([%behn %wake *] gift)
       =+  who=(slav %p i.t.wire)
       si-abet:si-retry:(sub who)
     ==

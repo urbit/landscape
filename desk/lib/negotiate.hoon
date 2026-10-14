@@ -84,7 +84,7 @@
 ::
 ++  agent
   |=  [notify=? our-versions=(map protocol version) =our=config]
-  ^-  $-(agent:gall agent:gall)
+  ^-  $-(form:agent:gall form:agent:gall)
   |^  agent
   ::
   +$  state-1
@@ -383,7 +383,7 @@
       [`[(slav %p i) i.t] t.t]
     ::
     ++  simulate-kicks
-      |=  [kik=(list [=wire gill:gall]) inner=agent:gall]
+      |=  [kik=(list [=wire gill:gall]) inner=form:agent:gall]
       ^-  [[(list card) _inner] _state]
       =|  cards=(list card)
       |-
@@ -471,10 +471,10 @@
     --
   ::
   ++  agent
-    |=  inner=agent:gall
+    |=  inner=form:agent:gall
     =|  state-1
     =*  state  -
-    ^-  agent:gall
+    ^-  form:agent:gall
     !.  ::  we hide all the "straight into the inner agent" paths from traces
     |_  =bowl:gall
     +*  this    .
